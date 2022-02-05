@@ -10,12 +10,13 @@
     <h1> <%= KindOfday %> </h1>
 
     <ul>
-        <li>a</li>
-        <li>e</li>
-        <li>c</li>
+       <% for(var i=0; i<newlistItems.length ; i++){ %>
+            <li> <%= newlistItems[i] %> </li>
+       <% } %>
     </ul>
     <form action="/" method="post">
-        input
+        <input type="text" name="newItem" id="">
+        <button type="submit">Add</button>
     </form>
 </body>
 </html>
