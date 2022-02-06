@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
 var today = new Date();
 var items = ["Finish 2 full stack courses", "Workout","Read for your Diseration"];
 app.get('/', (req, res) => {
